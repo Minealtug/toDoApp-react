@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
 function App() {
+const[todotext,setTodoText]=useState("");
+const handleSubmit= (event)=>{
+  event.preventDefault();
+  if (todotext===""){
+    alert("Todo text can't be empty");
+    return;
+  }
+
+
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1 className="text-center my-5">Todo App</h1>
+      <form >
+        <div className="input-group mb-3">
+          <input type="text" value={todotext}
+           className="form-control" 
+           placeholder="Type your todo"
+           onChange={(event)=>setTodoText(event.target.value)}
+            />
+          <button type="submit" className="btn btn-primary ">ADD</button>
+
+        </div>
+      </form>
+
     </div>
   );
 }
