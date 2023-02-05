@@ -8,3 +8,4 @@
 
 
 <a href="https://main--spectacular-quokka-1dcb46.netlify.app/"><h3>NETLİFY</h3></a>
+<p>https://main--spectacular-quokka-1dcb46.netlify.app/</p>
